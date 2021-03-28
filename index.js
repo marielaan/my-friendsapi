@@ -1,5 +1,6 @@
 const http = require('http');
 
+const port = parseInt(process.env.PORT) || 3054
 const server = http.createServer((request, response) => {
    
     switch(request.url){
@@ -14,7 +15,7 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(3054, () => {
-    console.log('Servidor operativo en puerto 3054 y direccion localhost');
+    console.log(`Servidor operativo en puerto ${port} y dirección localhos`); 
 });
 
 server.on('error', error => {
