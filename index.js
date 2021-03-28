@@ -16,3 +16,7 @@ const server = http.createServer((request, response) => {
 server.listen(3054, () => {
     console.log('Servidor operativo en puerto 3054 y direccion localhost');
 });
+
+server.on('error', error => {
+    console.log(error);
+})
