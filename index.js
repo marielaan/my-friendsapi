@@ -5,7 +5,7 @@ const server = http.createServer((request, response) => {
     switch(request.url){
         case'/':
         response.writeHead(200, {'Content-Type':'application/json'});
-        response.end(JSON.stringify('Hola Mundo'));
+        response.end(JSON.stringify('Estoy corriendo desde Mariela'));
         break;
         default:
             response.writeHead(404, {'Content-Type': 'text/plain'});
